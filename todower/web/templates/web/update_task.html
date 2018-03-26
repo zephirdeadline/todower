@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url "main" %}"><span class="glyphicon glyphicon-menu-left"></span> BACK</a>
+
+    <div class="container">
+    <form method="post" action="{% url 'update_task' task.id %}">
+        {% csrf_token %}
+        {{ task_form.as_p }}
+    <input type="submit" name="submit" value="Update">
+        <input type="submit" name="delete" value="Delete">
+    </form>
+    Info:
+    date: YYYY-MM-DD
+    </div>
+{% endblock %}
