@@ -25,7 +25,7 @@ SECRET_KEY = '@!@@&bkdsl_hxjb=ng+cvk@(ywtk!xcg*rq3+pfw$@8p*sv0a@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.63', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.1.63', '127.0.0.1', 'www.todower.w4pity.fr', 'todower.w4pity.fr']
 
 
 # Application definition
