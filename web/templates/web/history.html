@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url "main" %}"><span class="glyphicon glyphicon-menu-left"></span> BACK</a>
+    <div class="container" style="text-align: center; font-weight: bold; margin-top: 20px">
+
+        {% for day, tasks in histo.items|dictsortreversed:0 %}
+               <div class="row">
+
+
+                <div class="col-xs-4">
+                    {{ day }}
+                </div>
+
+                <div class="col-xs-8">
+                    <table class="table table-condensed">
+                        {% for task in tasks %}
+
+                            <tr>
+                                <td>{{ task.text }}</td>
+                            </tr>
+
+                        {% endfor %}
+
+                    </table>
+                </div>
+
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+
+{% endblock %}

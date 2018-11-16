@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <form id="login-form" action="{{ url_index }}"  method="post" role="form" style="display: block;">
+    <center>
+        <h1>Todower</h1>
+        {% csrf_token %}
+        {{ form_user.as_p }}
+    </center>
+        <input type="submit" name="login_submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Connexion">
+        <input type="submit" name="register_submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Enregistrement">
+    </form>
+    <!--END LOGIN / REGISTER-->
+{% endblock %}
